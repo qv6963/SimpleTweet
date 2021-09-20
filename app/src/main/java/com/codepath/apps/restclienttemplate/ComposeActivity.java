@@ -40,22 +40,7 @@ public class ComposeActivity extends AppCompatActivity {
         btnTweet = findViewById(R.id.btnTweet);
         mTextView = findViewById(R.id.mTextView);
 
-        etCompose.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mTextView.setText(String.valueOf(s.length()));
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                mTextView.setText(280 - s.toString().length() + " / 280");
-            }
-        });
+       
 
         //Set Click Listener on Button
         btnTweet.setOnClickListener(new View.OnClickListener(){
